@@ -1,15 +1,17 @@
 {
   "expo": {
-    "name": "pulse-app",
-    "slug": "pulse-app",
+    "name": "NearAid",
+    "slug": "nearaid",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.raagav.nearaid"
     },
     "android": {
+      "package": "com.raagav.nearaid",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,6 +21,26 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "NearAid shares your location with nearby emergencies only while you are available as a responder.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      "expo-font",
+      "expo-asset",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c838bba4-42e9-4172-ba52-5ace20348a83"
+      }
+    },
+    "owner": "raagav"
   }
 }
